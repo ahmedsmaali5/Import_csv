@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h5>Add Person</h5>
+    <form class="" action="" method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      <label for="file1"> Upload a file</label>
+      <input type="file" id="file1" name="file">
+      {{form}}
+      <input type="submit" name="" value="Add">
+    </form>
+    <ul>
+    {%for person in persons%}
+    <li>{{person.first_name}} | {{person.last_name}}</li>
+    {%endfor%}
+    </ul>
+  </body>
+</html>
